@@ -60,6 +60,9 @@ button:focus-visible {
   height: 75px;
   width: 175px;
 }
+.image-container:hover {
+  cursor: pointer;
+}
 .image-container > img {
   background-color: #888;
 }
