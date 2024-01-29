@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Testimony from "./testimony";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,9 @@ function App() {
       <p>Count is: {count}</p>
       <button onClick={handleCount}>Add to Count</button>
       <button onClick={clearCount}>Clear Count</button>
+      <div>
+        <Testimony />
+      </div>
     </>
   );
 }
