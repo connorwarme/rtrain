@@ -69,6 +69,12 @@ button:focus-visible {
 .image-container > img.active {
   background-color: #535bf2;
 }
+.slider-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

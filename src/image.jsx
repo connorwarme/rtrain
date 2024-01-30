@@ -17,7 +17,7 @@ const Image = ({ unit, selected, setSelected }) => {
   return ( 
     <>
       <div className="image-container">
-        <img src={unit.img.toString()} alt="Client Testimony" onClick={handleClick} className={ checkSelected() ? 'active' : ''} />
+        <img src={unit.img.toString()} alt="Client Testimony" onClick={handleClick} className={ checkSelected() ? 'active' : null} />
       </div>
     </>
    );
