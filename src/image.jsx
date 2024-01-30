@@ -1,14 +1,17 @@
 import "./index.css"
 
-const Image = ({ unit, selected, setSelected }) => {
+const Image = ({ unit, array, selected, setSelected }) => {
 
   const handleClick = () => {
-    setSelected(unit)
+    // need to figure out how to find index position of current unit, or I could pass it as props
+    // let index = array.indexOf(item => item.text === unit.text)
+    console.log(unit)
+    setSelected(unit.index)
   }
 
   const checkSelected = () => {
-    if (selected) {
-      if (selected.text === unit.text) {
+    if (selected && selected > -1) {
+      if (array[selected].text === unit.text) {
         return true
       }
     }
