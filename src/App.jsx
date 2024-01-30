@@ -10,8 +10,8 @@ function App() {
   };
 
   const clearCount = () => {
-    setCount(0)
-  }
+    setCount(0);
+  };
 
   return (
     <>
