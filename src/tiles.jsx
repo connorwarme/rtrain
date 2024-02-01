@@ -42,8 +42,8 @@ const Tiles = () => {
           return (
             <>
               <div className="tile-container">
+              <img src={tile.img} alt={tile.label} />
                 <h1 className="tile-title">{tile.title}</h1>
-                <img src={tile.img.toString()} alt={tile.label} />
               </div>
             </>
           )

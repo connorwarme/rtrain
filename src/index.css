@@ -75,6 +75,20 @@ button:focus-visible {
   justify-content: center;
   align-items: center;
 }
+.tiles-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 60vw;
+}
+.tile-container {
+  margin: 1rem;
+}
+.tile-container > h1 {
+  font-size: 2rem;
+}
+.tile-container > img {
+  height: 150px;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
