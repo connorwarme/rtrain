@@ -54,6 +54,32 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.header-container {
+  display: flex;
+  width: 70vw;
+}
+.header-spacer {
+  flex-grow: 1;
+}
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-menu > ul {
+  display: flex;
+  list-style: none;
+}
+.header-menu > ul > li {
+  margin: 1rem;
+  transition: all 150ms ease-in-out;
+}
+.header-menu > ul > li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
 .image-container {
   border: 5px;
   border-radius: 5px;
