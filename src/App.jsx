@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Testimony from "./testimony";
+import Tiles from "./tiles";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,9 @@ function App() {
       <button onClick={clearCount}>Clear Count</button>
       <div>
         <Testimony />
+      </div>
+      <div>
+        <Tiles />
       </div>
     </>
   );
