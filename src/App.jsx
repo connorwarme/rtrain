@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Header from "./header";
 import Testimony from "./testimony";
 import Tiles from "./tiles";
 
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <h1>Hello World</h1>
       <p>Count is: {count}</p>
       <button onClick={handleCount}>Add to Count</button>
