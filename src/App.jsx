@@ -5,6 +5,7 @@ import Testimony from "./Testimony";
 import Tiles from "./Tiles";
 import Greeting from "./Greeting";
 import List from "./List";
+import Form from "./Form";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -47,6 +48,7 @@ function App() {
         <Tiles />
       </div>
       <List />
+      <Form />
     </>
   );
 }
