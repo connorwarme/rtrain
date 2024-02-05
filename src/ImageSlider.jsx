@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Image from "./image";
+import Image from "./Image";
 
 const Slider = ({ testArr, selected, setSelected }) => {
   const [start, setStart] = useState(0);

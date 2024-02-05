@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../src/assets/react.svg";
-import Slider from "./image-slider";
+import Slider from "./ImageSlider";
 
 const Testimony = () => {
   const [selected, setSelected] = useState(null);
