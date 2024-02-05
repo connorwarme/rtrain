@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./header";
 import Testimony from "./testimony";
 import Tiles from "./tiles";
+import Greeting from "./Greeting";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,7 +19,7 @@ function App() {
   return (
     <>
       <Header />
-      <h1>Hello World</h1>
+      <Greeting />
       <p>Count is: {count}</p>
       <button onClick={handleCount}>Add to Count</button>
       <button onClick={clearCount}>Clear Count</button>
