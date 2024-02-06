@@ -8,6 +8,7 @@ export default function Form () {
     options: [],
   })
   const [checkedState, setCheckedState] = useState(new Array(9).fill(false))
+  const [printedList, setPrintedList] = useState([])
 
   const handleChange = (e) => {
     setPerson({
@@ -22,6 +23,19 @@ export default function Form () {
       index === position ? !item : item
     );
     setCheckedState(updatedCheckedState)
+  }
+
+  
+  const updateList = () => {
+    const listCopy = []
+    checkedState.map((checked, index) => {
+      if (checked) {
+        listCopy.push(toppings[index])
+      } else {
+        console.log('unchecked')
+      }
+    })
+    setPrintedList(listCopy)
   }
 
   return ( 
@@ -89,6 +103,8 @@ export default function Form () {
         <ul>
         {checkedState.map((option, index) => <li key={index}>{option ? 'true' : 'false'}</li>)}
         </ul>
+        <button onClick={updateList}>Get List</button>
+        {printedList.map(item => <p key={item}>{item}</p>)}
       </div>
     </>
    );
