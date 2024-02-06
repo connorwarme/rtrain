@@ -1,44 +1,95 @@
-const Form = () => {
+import { useState } from "react";
+
+export default function Form () {
+  const [person, setPerson] = useState({
+    name: 'Amity',
+    about: 'Energizer',
+    interests: 'nutrition',
+    options: [],
+  })
+  const [checkedState, setCheckedState] = useState(new Array(9).fill(false))
+
+  const handleChange = (e) => {
+    setPerson({
+      ...person,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const toppings = ['pepperoni', 'sausage', 'onion', 'mushroom', 'roasted garlic', 'rosemary', 'oregano', 'vegan sausage', 'mozzarella']
+  const handleOnChange = (position) => {
+    const updatedCheckedState = checkedState.map((item, index) =>
+      index === position ? !item : item
+    );
+    setCheckedState(updatedCheckedState)
+  }
+
   return ( 
     <>
       <form>
         <div>
           <label>Name</label>
-          <input type="text" />
+          <input type="text" name="name" value={person.name} onChange={handleChange} />
         </div>
         <div>
           <label>About</label>
-          <textarea />
+          <textarea name="about" value={person.about} onChange={handleChange} />
         </div>
         <div>
-          <label>Interests</label>
-          <select name="" id="">
+          <label>Interested In</label>
+          <select name="interests" value={person.interests} onChange={handleChange} >
             <option value="nutrition">Nutrition</option>
             <option value="longevity">Longevity</option>
             <option value="genetics">Genetics</option>
-            <option value="labs">labs</option>
+            <option value="labs">Labs</option>
           </select>
         </div>
-        <div>
+        {/* <div>
           <fieldset>
             <legend>Options</legend>
             <div>
               <label>Morning Appointment</label>
-              <input type="checkbox" name="morning" />
+              <input type="checkbox" id="morning" name="appt" />
             </div>
             <div>
               <label>Afternoon Appointment</label>
-              <input type="checkbox" name="afternoon" />
+              <input type="checkbox" id="afternoon" name="appt" />
             </div>
             <div>
               <label>Evening Appointment</label>
-              <input type="checkbox" name="evening" />
+              <input type="checkbox" id="evening" name="appt" />
             </div>
+          </fieldset>
+        </div> */}
+        <div>
+          <fieldset>
+            <legend>Toppings</legend>
+            { toppings.map((topping, index) => {
+              return (
+                <div key={index}>
+                  <label>{topping}</label>
+                  <input 
+                    type="checkbox"
+                    id={`custom-checkbox-${index}`}
+                    name={topping}
+                    value={topping}
+                    checked={checkedState[index]}
+                    onChange={() => handleOnChange(index)}
+                  />
+                </div>
+              )
+            })}
           </fieldset>
         </div>
       </form>
+      <div>
+        <h1>{person.name}</h1>
+        <p>{person.about}</p>
+        <p>{person.interests}</p>
+        <ul>
+        {checkedState.map((option, index) => <li key={index}>{option ? 'true' : 'false'}</li>)}
+        </ul>
+      </div>
     </>
    );
 }
- 
-export default Form;
