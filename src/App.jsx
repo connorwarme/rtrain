@@ -40,10 +40,10 @@ function App() {
     },
   ]
   return (
-    <div className="font-body">
+    <div className="font-body grid md:grid-cols-3">
       <Nav />
 
-      <main className="bg-gray-100 px-16 py-6">
+      <main className="bg-gray-100 px-16 py-6 md:col-span-2">
         <div className="flex justify-center md:justify-end">
           <Link to={'/login'} className="text-primary">
             Log in
@@ -60,7 +60,7 @@ function App() {
         <div>
           <HeaderSmall text="Latest Recipes" />
 
-          <div className="mt-8">
+          <div className="mt-8 grid lg:grid-cols-3 gap-10">
             {/* <!-- cards go here --> */}
             {recipes.map((recipe, index) => (
               <Card key={index} recipe={recipe} />

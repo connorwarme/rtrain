@@ -19,7 +19,7 @@ const Nav = () => {
 
   return (
     <>
-      <div>
+      <div className='md:col-span-1'>
         <nav>
           <div className="border-b border-gray-200 p-4">
             <h1>
