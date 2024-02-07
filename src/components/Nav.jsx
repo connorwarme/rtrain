@@ -21,11 +21,11 @@ const Nav = () => {
     <>
       <div>
         <nav>
-          <div>
+          <div className="border-b border-gray-200 p-4" >
             <h1>
               <Link
                 to={'/'}
-                className="border-b border-gray-200 p-4 font-bold uppercase"
+                className="font-bold uppercase"
               >
                 Food Ninja
               </Link>

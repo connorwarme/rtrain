@@ -8,13 +8,13 @@ import './App.css'
 
 function App() {
   return (
-    <div>
+    <div className='font-body'>
       <Nav />
 
       <main className="px-16 py-6">
         <div>
-          <Link to={'/login'}>Log in</Link>
-          <Link to={'signup'}>Sign up</Link>
+          <Link to={'/login'} className='text-primary'>Log in</Link>
+          <Link to={'signup'} className='text-secondary-100'>Sign up</Link>
         </div>
 
         <header>
