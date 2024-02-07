@@ -40,15 +40,21 @@ function App() {
     },
   ]
   return (
-    <div className="font-body grid md:grid-cols-3">
+    <div className="grid font-body md:grid-cols-3">
       <Nav />
 
       <main className="bg-gray-100 px-16 py-6 md:col-span-2">
         <div className="flex justify-center md:justify-end">
-          <Link to={'/login'} className="text-primary">
+          <Link
+            to={'/login'}
+            className="btn border-primary text-primary md:border-2"
+          >
             Log in
           </Link>
-          <Link to={'signup'} className="ml-2 text-primary">
+          <Link
+            to={'signup'}
+            className="btn ml-2 border-primary text-primary md:border-2"
+          >
             Sign up
           </Link>
         </div>
@@ -60,7 +66,7 @@ function App() {
         <div>
           <HeaderSmall text="Latest Recipes" />
 
-          <div className="mt-8 grid lg:grid-cols-3 gap-10">
+          <div className="mt-8 grid gap-10 lg:grid-cols-3">
             {/* <!-- cards go here --> */}
             {recipes.map((recipe, index) => (
               <Card key={index} recipe={recipe} />
@@ -73,7 +79,9 @@ function App() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <div className="bg-secondary-100 text-secondary-200">Load More</div>
+          <div className="btn bg-secondary-100 text-secondary-200">
+            Load More
+          </div>
         </div>
       </main>
     </div>
