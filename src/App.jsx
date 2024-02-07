@@ -7,7 +7,7 @@ import './App.css'
 
 function App() {
   return (
-    <>
+    <div>
       <Nav />
 
       <main>
@@ -21,7 +21,7 @@ function App() {
         </header>
 
         <div>
-          <h4>Latest Recipes</h4>
+          <h4 className='font-bold'>Latest Recipes</h4>
 
           <div>
             {/* <!-- cards go here --> */}
@@ -34,7 +34,7 @@ function App() {
             </div>
           </div>
 
-          <h4>Most Popular</h4>
+          <h4 className='font-bold'>Most Popular</h4>
 
           <div>{/* <!-- cards go here --> */}</div>
         </div>
@@ -43,7 +43,7 @@ function App() {
           <div>Load More</div>
         </div>
       </main>
-    </>
+    </div>
   )
 }
 
