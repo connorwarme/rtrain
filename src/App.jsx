@@ -3,9 +3,9 @@ import "./App.css";
 import Header from "./Header";
 import Testimony from "./Testimony";
 import Tiles from "./Tiles";
-import Greeting from "./Greeting";
 import List from "./List";
 import Form from "./Form";
+import Footer from "./Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,7 +35,6 @@ function App() {
   return (
     <>
       <Header />
-      <Greeting />
       <div style={{backgroundColor: bgColor, height: '100px', width: '100px'}}></div>
       <p>Count is: {count}</p>
       <button onClick={handleCount}>Add to Count</button>
@@ -49,6 +48,7 @@ function App() {
       </div>
       <List />
       <Form />
+      <Footer />
     </>
   );
 }
