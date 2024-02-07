@@ -21,12 +21,9 @@ const Nav = () => {
     <>
       <div>
         <nav>
-          <div className="border-b border-gray-200 p-4" >
+          <div className="border-b border-gray-200 p-4">
             <h1>
-              <Link
-                to={'/'}
-                className="font-bold uppercase"
-              >
+              <Link to={'/'} className="font-bold uppercase">
                 Food Ninja
               </Link>
             </h1>
