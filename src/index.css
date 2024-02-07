@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .btn {
-  @apply cursor-pointer rounded-full px-3 py-2 text-xs font-bold tracking-wider uppercase;
+  @apply cursor-pointer rounded-full px-3 py-2 text-xs font-bold uppercase tracking-wider;
 }
 
 /* from older content (AppOld.jsx) */

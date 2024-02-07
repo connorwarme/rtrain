@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import NavLink from './NavLink'
-import home from "../assets/home.svg"
-import about from "../assets/about.svg"
-import contact from "../assets/contact.svg"
+import home from '../assets/home.svg'
+import about from '../assets/about.svg'
+import contact from '../assets/contact.svg'
 
 const Nav = () => {
-
   const links = [
     {
       text: 'Home',
@@ -36,20 +35,35 @@ const Nav = () => {
   return (
     <>
       <div className="md:col-span-1 md:flex md:justify-end">
-        <nav className='text-right'>
-          <div className="flex justify-between items-center">
-            <h1 className='border-b border-gray-200 p-4 font-bold uppercase'>
+        <nav className="text-right">
+          <div className="flex items-center justify-between">
+            <h1 className="border-b border-gray-200 p-4 font-bold uppercase">
               <Link to={'/'} className="hover:text-gray-800">
                 Food Ninja
               </Link>
             </h1>
-            <div className='px-4 cursor-pointer md:hidden' id='menu' onClick={handleMenuClick}>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <div
+              className="cursor-pointer px-4 md:hidden"
+              id="menu"
+              onClick={handleMenuClick}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
               </svg>
             </div>
           </div>
-          <ul className='text-sm mt-6 hidden md:block' id='menu-list'>
+          <ul className="mt-6 hidden text-sm md:block" id="menu-list">
             {links.map((link, index) => (
               <NavLink key={index} link={link} />
             ))}

@@ -13,9 +13,20 @@ const Card = ({ recipe }) => {
             Recipe by {recipe.author}
           </span>
         </div>
-        <div className="absolute top-0 ml-2 mt-2 rounded-full bg-secondary-100 p-2 font-bold uppercase text-secondary-200 flex items-center">
-          <svg className="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        <div className="absolute top-0 ml-2 mt-2 flex items-center rounded-full bg-secondary-100 p-2 font-bold uppercase text-secondary-200">
+          <svg
+            className="w-5"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
           </svg>
           <span className="ml-1">{recipe.duration} mins</span>
         </div>
