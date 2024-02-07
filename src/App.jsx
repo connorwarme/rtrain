@@ -47,13 +47,13 @@ function App() {
         <div className="flex justify-center md:justify-end">
           <Link
             to={'/login'}
-            className="btn border-primary text-primary md:border-2"
+            className="btn border-primary text-primary md:border-2 hover:bg-primary hover:text-white"
           >
             Log in
           </Link>
           <Link
             to={'signup'}
-            className="btn ml-2 border-primary text-primary md:border-2"
+            className="btn ml-2 border-primary text-primary md:border-2 hover:bg-primary hover:text-white"
           >
             Sign up
           </Link>
@@ -79,7 +79,7 @@ function App() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <div className="btn bg-secondary-100 text-secondary-200">
+          <div className="btn bg-secondary-100 text-secondary-200 hover:shadow-inner">
             Load More
           </div>
         </div>

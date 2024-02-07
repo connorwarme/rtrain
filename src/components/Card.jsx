@@ -1,7 +1,7 @@
 const Card = ({ recipe }) => {
   return (
     <>
-      <div className="relative overflow-hidden rounded bg-white shadow-md">
+      <div className="relative overflow-hidden rounded bg-white shadow-md hover:shadow-lg">
         <img
           src={recipe.img.url}
           alt={recipe.img.alt}

@@ -29,7 +29,7 @@ const Nav = () => {
         <nav>
           <div className="border-b border-gray-200 p-4">
             <h1>
-              <Link to={'/'} className="font-bold uppercase">
+              <Link to={'/'} className="font-bold uppercase hover:text-gray-800">
                 Food Ninja
               </Link>
             </h1>
