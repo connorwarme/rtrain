@@ -1,19 +1,25 @@
 import { Link } from 'react-router-dom'
 import NavLink from './NavLink'
+import home from "../assets/home.svg"
+import about from "../assets/about.svg"
+import contact from "../assets/contact.svg"
 
 const Nav = () => {
   const links = [
     {
       text: 'Home',
       location: '/',
+      img: home,
     },
     {
       text: 'About',
       location: '/about',
+      img: about,
     },
     {
       text: 'Contact',
       location: '/contact',
+      img: contact,
     },
   ]
 
