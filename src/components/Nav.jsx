@@ -23,7 +23,12 @@ const Nav = () => {
         <nav>
           <div>
             <h1>
-              <Link to={'/'} className='font-bold uppercase' >Food Ninja</Link>
+              <Link
+                to={'/'}
+                className="border-b border-gray-200 p-4 font-bold uppercase"
+              >
+                Food Ninja
+              </Link>
             </h1>
           </div>
           <ul>

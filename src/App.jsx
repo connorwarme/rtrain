@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Nav from './components/Nav'
 import Header from './components/Header'
+import HeaderSmall from './components/HeaderSmall'
 import stew from './assets/img/stew.jpg'
 import './App.css'
 
@@ -10,7 +11,7 @@ function App() {
     <div>
       <Nav />
 
-      <main>
+      <main className="px-16 py-6">
         <div>
           <Link to={'/login'}>Log in</Link>
           <Link to={'signup'}>Sign up</Link>
@@ -21,9 +22,9 @@ function App() {
         </header>
 
         <div>
-          <h4 className='font-bold'>Latest Recipes</h4>
+          <HeaderSmall text="Latest Recipes" />
 
-          <div>
+          <div className="mt-8">
             {/* <!-- cards go here --> */}
             <div>
               <img src={stew} alt="Stew" />
@@ -34,12 +35,12 @@ function App() {
             </div>
           </div>
 
-          <h4 className='font-bold'>Most Popular</h4>
+          <HeaderSmall text="Most Popular" />
 
-          <div>{/* <!-- cards go here --> */}</div>
+          <div className="mt-8">{/* <!-- cards go here --> */}</div>
         </div>
 
-        <div>
+        <div className="mt-12">
           <div>Load More</div>
         </div>
       </main>

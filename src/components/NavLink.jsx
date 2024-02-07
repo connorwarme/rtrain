@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const NavLink = ({ link }) => {
   return (
     <>
-      <li className='text-gray-700 font-bold'>
+      <li className="font-bold text-gray-700">
         <Link to={link.location}>
           <span>{link.text}</span>
         </Link>
