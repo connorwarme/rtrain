@@ -35,7 +35,7 @@ const Footer = () => {
     <>
       <div className="grid justify-center col-span-3 mt-10 mb-5">
         <div>
-          <p>Photo credit: Janja Zedja</p>
+          <p className="text-center">Photo credit: Janja Zedja</p>
         </div>
         <div className="flex justify-center">
           {icons.map((icon, index) => <div key={index}>{buildIconUnit(icon)}</div>)}

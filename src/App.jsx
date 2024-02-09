@@ -41,7 +41,7 @@ function App() {
     },
   ]
   return (
-    <div className="grid font-body md:grid-cols-3">
+    <div className="md:grid font-body md:grid-cols-3">
       <Nav />
 
       <main className="bg-gray-100 px-16 py-6 md:col-span-2">
