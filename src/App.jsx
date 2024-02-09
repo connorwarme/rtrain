@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import Header from './components/Header'
 import HeaderSmall from './components/HeaderSmall'
 import Card from './components/Card'
+import Footer from './components/Footer'
 import stew from './assets/img/stew.jpg'
 import noodles from './assets/img/noodles.jpg'
 import curry from './assets/img/curry.jpg'
@@ -84,6 +85,7 @@ function App() {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

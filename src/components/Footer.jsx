@@ -11,16 +11,21 @@ const Footer = () => {
     {
       img: icon,
       alt: "About",
-      url: 'https://google.com',
+      url: 'https://github.com',
+    },
+    {
+      img: icon,
+      alt: "About",
+      url: 'https://linkedin.com',
     },
   ]
 
-  const buildIconUnit = (img, key) => {
+  const buildIconUnit = (img) => {
     return (
       <>
-        <div key={key}>
+        <div>
           <a href={img.url} className="hover:cursor-pointer">
-            <img src={img.img} alt={img.alt} className="h-36" />
+            <img src={img.img} alt={img.alt} className="h-12" />
           </a>
         </div>
       </>
@@ -28,12 +33,12 @@ const Footer = () => {
   }
   return ( 
     <>
-      <div>
+      <div className="grid justify-center col-span-3 mt-10 mb-5">
         <div>
           <p>Photo credit: Janja Zedja</p>
         </div>
-        <div>
-          {icons.map((icon, index) => buildIconUnit(icon, index))}
+        <div className="flex justify-center">
+          {icons.map((icon, index) => <div key={index}>{buildIconUnit(icon)}</div>)}
         </div>
       </div>
     </>
