@@ -18,7 +18,7 @@ const data = [
     id: 4,
     question: 'What is your next big objective?',
     answer: 'A return to Cobra Crack this summer!',
-  }
+  },
 ]
 
-export default data;
+export default data
