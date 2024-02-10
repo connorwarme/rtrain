@@ -18,10 +18,20 @@ const Accordion = () => {
     setSelectMulti(copy)
   }
 
+  const handleEnableMulti = () => {
+    if (enableMulti) {
+      setSelectMulti([])
+      setEnableMulti(false)
+    } else {
+      setEnableMulti(!enableMulti)
+      setSelected(null)
+    }
+  }
+
   const data = info;
   return (
     <div className="flex flex-col gap-3 justify-center items-center">
-      <button onClick={() => setEnableMulti(!enableMulti)}>
+      <button onClick={handleEnableMulti}>
         Enable Multiple Selection
       </button>
       {data.map((item) => {
