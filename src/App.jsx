@@ -8,7 +8,7 @@ import ImageSlider from './components/slider'
 
 function App() {
   return (
-    <div>
+    <div className='flex justify-center'>
       {/* <Accordion /> */}
       {/* <RandomColor /> */}
       {/* <StarRating /> */}
