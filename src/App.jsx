@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 // import StarRating from './components/rating'
 import './App.css'
 import LoadMore from './components/load'
+import MenuUI from './components/menu'
 // import ImageSlider from './components/slider'
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
       {/* <RandomColor /> */}
       {/* <StarRating /> */}
       {/* <ImageSlider url={'https://picsum.photos/v2/list'} /> */}
-      <LoadMore />
+      {/* <LoadMore /> */}
+      <MenuUI />
     </div>
   )
 }
