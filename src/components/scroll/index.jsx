@@ -4,6 +4,7 @@ const ScrollIndicator = ({ url }) => {
   const [isLoading, setIsLoading] = useState(false)
   const [data, setData] = useState([])
   const [errorMsg, setErrorMsg] = useState('')
+  const [scrollPercent, setScrollPercent] = useState(0)
 
   const fetchData = async (url) => {
     try {
@@ -22,10 +23,28 @@ const ScrollIndicator = ({ url }) => {
       setIsLoading(false)
     }
   }
+  const handleScroll = () => {
+    // console.log(document.body.scrollTop, document.documentElement.scrollTop, document.documentElement.scrollHeight, document.documentElement.clientHeight)
+
+    const scrollAmount = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+    const scrollPercent = Math.round((scrollAmount / height) * 100);
+
+    setScrollPercent(scrollPercent)
+
+  }
 
   useEffect(() => {
     fetchData(url)
   }, [url])
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll'                                           , handleScroll)
+    }
+  })
 
   if (isLoading) {
     return <h4 className="text-lg m-2 p-4">Content is loading, please wait...</h4>
@@ -35,6 +54,9 @@ const ScrollIndicator = ({ url }) => {
   }
   return ( 
     <div>
+      <div className="w-screen h-20 bg-slate-200 sticky top-0 flex flex-col justify-end">
+        <div style={{width: `${scrollPercent}%`}} className="h-3 bg-red-600"></div>
+      </div>
       {
         data && data.length > 0
         ? (
