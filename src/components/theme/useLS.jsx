@@ -1,17 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
-const useLS = ( key, defaultValue ) => {
+const useLS = (key, defaultValue) => {
   const [value, setValue] = useState(() => {
-    let currentValue;
+    let currentValue
     console.log(key)
     try {
-      currentValue = JSON.parse(localStorage.getItem(key)) || String(defaultValue);
+      currentValue =
+        JSON.parse(localStorage.getItem(key)) || String(defaultValue)
     } catch (error) {
       console.log(error)
       currentValue = defaultValue
     }
 
-    return currentValue;
+    return currentValue
   })
 
   useEffect(() => {
@@ -20,5 +21,5 @@ const useLS = ( key, defaultValue ) => {
 
   return [value, setValue]
 }
- 
-export default useLS;
+
+export default useLS

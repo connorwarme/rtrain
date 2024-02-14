@@ -8,7 +8,7 @@ const MenuItem = ({ list }) => {
     console.log(label)
     setDisplayCurrent({
       ...displayCurrent,
-      [label]: !displayCurrent[label]
+      [label]: !displayCurrent[label],
     })
   }
   console.log(displayCurrent)

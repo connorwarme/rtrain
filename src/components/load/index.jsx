@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 const LoadMore = () => {
   const [isLoading, setIsLoading] = useState(false)
@@ -8,7 +8,9 @@ const LoadMore = () => {
   const fetchProducts = async () => {
     try {
       setIsLoading(true)
-      const response = await fetch(`https://dummyjson.com/products?limit=20&skip=${count * 20}`)
+      const response = await fetch(
+        `https://dummyjson.com/products?limit=20&skip=${count * 20}`
+      )
       const data = await response.json()
 
       if (data && data.products && data.products.length) {
@@ -17,7 +19,6 @@ const LoadMore = () => {
         setIsLoading(false)
       }
       console.log(count)
-
     } catch (error) {
       console.log(error)
       setIsLoading(false)
@@ -32,29 +33,32 @@ const LoadMore = () => {
     fetchProducts()
   }, [])
 
-
   if (isLoading) {
     return <div>Content Loading!</div>
   }
-  return ( 
+  return (
     <div>
       <div className="grid grid-cols-5">
-        {
-          products && products.length 
+        {products && products.length
           ? products.map((product, index) => {
-            return (
-              <div key={index}>
-                <img src={product.thumbnail} alt="" className="h-64 w-64"/>
-                <h4>{product.title}</h4>
-              </div>
-            )
-          })
-          : null
-        }
+              return (
+                <div key={index}>
+                  <img src={product.thumbnail} alt="" className="h-64 w-64" />
+                  <h4>{product.title}</h4>
+                </div>
+              )
+            })
+          : null}
       </div>
-      <button className='mt-20 border-red-400 border-4' disabled={count < 5 ? false : true} onClick={handleLoadMore}>Load More</button>
+      <button
+        className="mt-20 border-4 border-red-400"
+        disabled={count < 5 ? false : true}
+        onClick={handleLoadMore}
+      >
+        Load More
+      </button>
     </div>
-   );
+  )
 }
- 
-export default LoadMore;
+
+export default LoadMore

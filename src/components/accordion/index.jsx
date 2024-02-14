@@ -28,12 +28,10 @@ const Accordion = () => {
     }
   }
 
-  const data = info;
+  const data = info
   return (
-    <div className="flex flex-col gap-3 justify-center items-center">
-      <button onClick={handleEnableMulti}>
-        Enable Multiple Selection
-      </button>
+    <div className="flex flex-col items-center justify-center gap-3">
+      <button onClick={handleEnableMulti}>Enable Multiple Selection</button>
       {data.map((item) => {
         {
           console.log(item)
@@ -49,7 +47,12 @@ const Accordion = () => {
               }
             >
               <h3 className="mr-10">{item.question}</h3>
-              <span>{(selected === item.id || (enableMulti && selectMulti.indexOf(item.id) !== -1)) ? '-' : '+'}</span>
+              <span>
+                {selected === item.id ||
+                (enableMulti && selectMulti.indexOf(item.id) !== -1)
+                  ? '-'
+                  : '+'}
+              </span>
             </div>
             <div>
               {(selected === item.id ||

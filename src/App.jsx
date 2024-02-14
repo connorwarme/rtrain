@@ -9,11 +9,11 @@ import './App.css'
 // import QRGenerator from './components/generator'
 // import LightDark from './components/theme'
 // import ImageSlider from './components/slider'
-import ScrollIndicator from './components/scroll'
+// import ScrollIndicator from './components/scroll'
 
 function App() {
   return (
-    <div className='flex justify-center'>
+    <div className="flex justify-center">
       {/* <Accordion /> */}
       {/* <RandomColor /> */}
       {/* <StarRating /> */}
@@ -22,7 +22,7 @@ function App() {
       {/* <MenuUI /> */}
       {/* <QRGenerator /> */}
       {/* <LightDark /> */}
-      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />
+      {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} /> */}
     </div>
   )
 }

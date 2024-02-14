@@ -14,10 +14,27 @@ const RandomColor = () => {
   }
 
   const generateHexColor = () => {
-    const hexRange = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']
+    const hexRange = [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      'A',
+      'B',
+      'C',
+      'D',
+      'E',
+      'F',
+    ]
 
     let value = '#'
-    for (let i=0; i<6; i++) {
+    for (let i = 0; i < 6; i++) {
       value += hexRange[generateRandomNumber(hexRange.length)]
     }
     setRgbValue('')
@@ -40,11 +57,26 @@ const RandomColor = () => {
       generateRgbColor()
     }
   }
-  
+
   return (
-    <div style={{backgroundColor: hexColor ? hexValue : rgbValue, height: '100vh'}}>
-      <button onClick={handleChangeColor} className='p-4 m-4 border bg-slate-300'>{ hexColor ? 'Use RGB' : 'Use Hex' }</button>
-      <button onClick={(handleGenerateColor)} className='p-4 m-4 border bg-slate-300'>Generate Random Color</button>
+    <div
+      style={{
+        backgroundColor: hexColor ? hexValue : rgbValue,
+        height: '100vh',
+      }}
+    >
+      <button
+        onClick={handleChangeColor}
+        className="m-4 border bg-slate-300 p-4"
+      >
+        {hexColor ? 'Use RGB' : 'Use Hex'}
+      </button>
+      <button
+        onClick={handleGenerateColor}
+        className="m-4 border bg-slate-300 p-4"
+      >
+        Generate Random Color
+      </button>
       <div>
         <h1>{hexColor ? 'Hex' : 'RGB'}</h1>
         <h3>{hexColor ? hexValue : rgbValue}</h3>

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import QRCode from "react-qr-code";
+import { useState } from 'react'
+import QRCode from 'react-qr-code'
 
 const QRGenerator = () => {
   const [value, setValue] = useState('')
@@ -15,21 +15,29 @@ const QRGenerator = () => {
     setValue('')
   }
 
-  return ( 
+  return (
     <div className="grid grid-rows-6">
       <div>
         <label htmlFor="data-input">Enter Data:</label>
-        <input type="text" id="data-input" onInput={handleInput} value={value} />
-        <button onClick={handleGenerate} disabled={value && value.trim() !== '' ? false : true } className="border rounded-md p-3 m-3">Generate QR Code</button>
-      </div> 
-      <div className="border-2 p-4 m-4 bg-slate-600 h row-span-5 flex justify-center items-center">
-        { qr
-          ? <QRCode value={qr} className=""/>
-          : null
-        }
+        <input
+          type="text"
+          id="data-input"
+          onInput={handleInput}
+          value={value}
+        />
+        <button
+          onClick={handleGenerate}
+          disabled={value && value.trim() !== '' ? false : true}
+          className="m-3 rounded-md border p-3"
+        >
+          Generate QR Code
+        </button>
+      </div>
+      <div className="h row-span-5 m-4 flex items-center justify-center border-2 bg-slate-600 p-4">
+        {qr ? <QRCode value={qr} className="" /> : null}
       </div>
     </div>
-   );
+  )
 }
- 
-export default QRGenerator;
+
+export default QRGenerator
