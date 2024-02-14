@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import './App.css'
 import LoadMore from './components/load'
 import MenuUI from './components/menu'
+import QRGenerator from './components/generator'
 // import ImageSlider from './components/slider'
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       {/* <StarRating /> */}
       {/* <ImageSlider url={'https://picsum.photos/v2/list'} /> */}
       {/* <LoadMore /> */}
-      <MenuUI />
+      {/* <MenuUI /> */}
+      <QRGenerator />
     </div>
   )
 }
