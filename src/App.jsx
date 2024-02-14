@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
 import DynamicTabs from './components/tabs'
+import Modal from './components/modal'
 // import Accordion from './components/accordion'
 // import RandomColor from './components/color'
 // import StarRating from './components/rating'
@@ -24,7 +25,8 @@ function App() {
       {/* <QRGenerator /> */}
       {/* <LightDark /> */}
       {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} /> */}
-      <DynamicTabs />
+      {/* <DynamicTabs /> */}
+      <Modal />
     </div>
   )
 }
