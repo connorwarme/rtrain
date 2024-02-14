@@ -7,6 +7,7 @@ import './App.css'
 import LoadMore from './components/load'
 import MenuUI from './components/menu'
 import QRGenerator from './components/generator'
+import LightDark from './components/theme'
 // import ImageSlider from './components/slider'
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
       {/* <ImageSlider url={'https://picsum.photos/v2/list'} /> */}
       {/* <LoadMore /> */}
       {/* <MenuUI /> */}
-      <QRGenerator />
+      {/* <QRGenerator /> */}
+      <LightDark />
     </div>
   )
 }
