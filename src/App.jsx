@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import './App.css'
 // import Accordion from './components/accordion'
 // import RandomColor from './components/color'
 // import StarRating from './components/rating'
-import './App.css'
-import LoadMore from './components/load'
-import MenuUI from './components/menu'
-import QRGenerator from './components/generator'
-import LightDark from './components/theme'
+// import LoadMore from './components/load'
+// import MenuUI from './components/menu'
+// import QRGenerator from './components/generator'
+// import LightDark from './components/theme'
 // import ImageSlider from './components/slider'
+import ScrollIndicator from './components/scroll'
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <LoadMore /> */}
       {/* <MenuUI /> */}
       {/* <QRGenerator /> */}
-      <LightDark />
+      {/* <LightDark /> */}
+      <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />
     </div>
   )
 }
