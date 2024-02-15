@@ -4,6 +4,7 @@ import './App.css'
 import DynamicTabs from './components/tabs'
 import Modal from './components/modal'
 import GitHubProfile from './components/githubprofile'
+import Autocomplete from './components/autocomplete'
 // import Accordion from './components/accordion'
 // import RandomColor from './components/color'
 // import StarRating from './components/rating'
@@ -28,7 +29,8 @@ function App() {
       {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} /> */}
       {/* <DynamicTabs /> */}
       {/* <Modal /> */}
-      <GitHubProfile />
+      {/* <GitHubProfile /> */}
+      <Autocomplete />
     </div>
   )
 }
