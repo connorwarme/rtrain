@@ -5,31 +5,35 @@ const TicTacToe = () => {
   const [xTurn, setXTurn] = useState(true)
   const [status, setStatus] = useState('meh')
 
-  const winningConditions = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ]
   const handleClick = (value) => {
-    console.log(value)
     const copySquares = [...squares]
-    if (copySquares[value]) return
-    // check if square is empty, if yes, mark
+    // if there's a winner, or already a value, don't handle click
+    if (checkWinner(copySquares) || copySquares[value]) return
+    // otherwise, mark square based on whose turn
     copySquares[value] = xTurn ? 'X' : 'O'
+    // switch turns
     setXTurn(!xTurn)
+    // update state of board (ie array)
     setSquares(copySquares)
   }
 
   const checkWinner = (squares) => {
+    const winningConditions = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+    ]
     for (let i = 0; i < winningConditions.length; i++) {
       const [x, y, z] = winningConditions[i]
 
       if (
+        // if there's a value in x, and it matches the value in y, and in z
+        // then return the winning value
         squares[x] &&
         squares[x] === squares[y] &&
         squares[x] === squares[z]
@@ -42,6 +46,9 @@ const TicTacToe = () => {
 
   useEffect(() => {
     const winner = checkWinner(squares)
+    // if no winner and every square is full, it is a draw
+    // if a winner, declare winner
+    // otherwise, update whose turn it is
     if (!winner && squares.every((square) => square !== '')) {
       setStatus('Game Over! It was a draw. Try again!')
     } else if (winner) {
