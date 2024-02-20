@@ -19,7 +19,9 @@ import './App.css'
 // import FeatureFlag from './components/flag'
 // import UseFetchTest from './components/useFetch/test'
 // import UseOutsideClickTest from './components/useOutsideClick/test'
-import UseResponsiveTest from './components/useResponsive/test'
+// import UseResponsiveTest from './components/useResponsive/test'
+import ScrollNinja from './components/scrollNinja'
+
 function App() {
   return (
     <div className="flex justify-center">
@@ -45,7 +47,9 @@ function App() {
 
       {/* <UseFetchTest /> */}
       {/* <UseOutsideClickTest /> */}
-      <UseResponsiveTest />
+      {/* <UseResponsiveTest /> */}
+
+      <ScrollNinja />
     </div>
   )
 }
