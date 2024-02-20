@@ -1,10 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './App.css'
-import DynamicTabs from './components/tabs'
-import Modal from './components/modal'
-import GitHubProfile from './components/githubprofile'
-import Autocomplete from './components/autocomplete'
 // import Accordion from './components/accordion'
 // import RandomColor from './components/color'
 // import StarRating from './components/rating'
@@ -14,6 +10,10 @@ import Autocomplete from './components/autocomplete'
 // import LightDark from './components/theme'
 // import ImageSlider from './components/slider'
 // import ScrollIndicator from './components/scroll'
+// import DynamicTabs from './components/tabs'
+// import Modal from './components/modal'
+// import GitHubProfile from './components/githubprofile'
+// import Autocomplete from './components/autocomplete'
 
 function App() {
   return (
@@ -30,7 +30,7 @@ function App() {
       {/* <DynamicTabs /> */}
       {/* <Modal /> */}
       {/* <GitHubProfile /> */}
-      <Autocomplete />
+      {/* <Autocomplete /> */}
     </div>
   )
 }
