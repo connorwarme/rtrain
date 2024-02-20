@@ -58,13 +58,9 @@ const Autocomplete = () => {
         {showDropdown && filteredUsers && filteredUsers.length > 0 ? (
           <div className="bg-slate-200">
             <ul>
-              {
-                filteredUsers && filteredUsers.length > 0
-                ? (
-                  filteredUsers.map(user => <li key={user}>{user}</li>)
-                )
-                : null
-              }
+              {filteredUsers && filteredUsers.length > 0
+                ? filteredUsers.map((user) => <li key={user}>{user}</li>)
+                : null}
             </ul>
           </div>
         ) : null}
