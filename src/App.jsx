@@ -14,7 +14,9 @@ import './App.css'
 // import Modal from './components/modal'
 // import GitHubProfile from './components/githubprofile'
 // import Autocomplete from './components/autocomplete'
-import TicTacToe from './components/tictactoe'
+// import TicTacToe from './components/tictactoe'
+import FeatureFlagGlobalState from './components/flag/context'
+import FeatureFlag from './components/flag'
 
 function App() {
   return (
@@ -32,7 +34,12 @@ function App() {
       {/* <Modal /> */}
       {/* <GitHubProfile /> */}
       {/* <Autocomplete /> */}
-      <TicTacToe />
+      {/* <TicTacToe /> */}
+
+      {/* have to wrap our component in the context component */}
+      <FeatureFlagGlobalState>
+        <FeatureFlag />
+      </FeatureFlagGlobalState>
     </div>
   )
 }
