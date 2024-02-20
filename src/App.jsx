@@ -15,8 +15,9 @@ import './App.css'
 // import GitHubProfile from './components/githubprofile'
 // import Autocomplete from './components/autocomplete'
 // import TicTacToe from './components/tictactoe'
-import FeatureFlagGlobalState from './components/flag/context'
-import FeatureFlag from './components/flag'
+// import FeatureFlagGlobalState from './components/flag/context'
+// import FeatureFlag from './components/flag'
+import UseFetchTest from './components/useFetch/test'
 
 function App() {
   return (
@@ -37,9 +38,11 @@ function App() {
       {/* <TicTacToe /> */}
 
       {/* have to wrap our component in the context component */}
-      <FeatureFlagGlobalState>
+      {/* <FeatureFlagGlobalState>
         <FeatureFlag />
-      </FeatureFlagGlobalState>
+      </FeatureFlagGlobalState> */}
+
+      <UseFetchTest />
     </div>
   )
 }
