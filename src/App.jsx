@@ -18,8 +18,8 @@ import './App.css'
 // import FeatureFlagGlobalState from './components/flag/context'
 // import FeatureFlag from './components/flag'
 // import UseFetchTest from './components/useFetch/test'
-import UseOutsideClickTest from './components/useOutsideClick/test'
-
+// import UseOutsideClickTest from './components/useOutsideClick/test'
+import UseResponsiveTest from './components/useResponsive/test'
 function App() {
   return (
     <div className="flex justify-center">
@@ -44,7 +44,8 @@ function App() {
       </FeatureFlagGlobalState> */}
 
       {/* <UseFetchTest /> */}
-      <UseOutsideClickTest />
+      {/* <UseOutsideClickTest /> */}
+      <UseResponsiveTest />
     </div>
   )
 }
