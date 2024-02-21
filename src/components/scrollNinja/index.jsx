@@ -8,6 +8,7 @@ const ScrollNinja = () => {
   )
 
   const ref = useRef(null)
+  const sectionRef = useRef(null)
 
   const handleScrollToTop = () => {
     window.scrollTo({
@@ -18,6 +19,14 @@ const ScrollNinja = () => {
   }
   const handleScrollToBottom = () => {
     ref.current.scrollIntoView({ behavior: 'smooth' })
+  }
+  const handleScrollToSection = () => {
+    let pos = sectionRef.current.getBoundingClientRect()
+
+    window.scrollTo({
+      top: pos.top,
+      behavior: 'smooth',
+    })
   }
 
   if (isLoading) {
@@ -33,10 +42,32 @@ const ScrollNinja = () => {
       <button onClick={handleScrollToBottom} className="m-4 border-2 p-4">
         Scroll to Bottom
       </button>
+      <button onClick={handleScrollToSection} className="m-4 border-2 p-4">
+        Scroll to Section
+      </button>
+      <h1 className="mt-10">Section One</h1>
       <ul className="list-none">
         {data && data.products && data.products.length > 0
           ? data.products.map((item, index) => (
               <li key={index}>{item.title}</li>
+            ))
+          : null}
+      </ul>
+      <h1 className="mt-10" ref={sectionRef}>
+        Section Two
+      </h1>
+      <ul className="list-none">
+        {data && data.products && data.products.length > 0
+          ? data.products.map((item, index) => (
+              <li key={index * 10}>{item.title}</li>
+            ))
+          : null}
+      </ul>
+      <h1 className="mt-10">Section Two</h1>
+      <ul className="list-none">
+        {data && data.products && data.products.length > 0
+          ? data.products.map((item, index) => (
+              <li key={index * 100}>{item.title}</li>
             ))
           : null}
       </ul>
